@@ -1,0 +1,24 @@
+{
+    
+        "todos": [
+          {
+            "id": 1,
+            "title": "خرید مواد غذایی",
+            "description": "نان، شیر و میوه خریدن.",
+            "completed": false
+          },
+          {
+            "id": 2,
+            "title": "تمرین ورزشی",
+            "description": "دویدن به مدت ۳۰ دقیقه.",
+            "completed": true
+          },
+          {
+            "id": 3,
+            "title": "مطالعه کتاب",
+            "description": "فصل اول کتاب 'روانشناسی مثبت' را بخوان.",
+            "completed": false
+          }
+        ]
+      
+}
