@@ -14,13 +14,13 @@ interface Todo {
 function App() {
  const [todos, setTodos] = useState<Todo[]>([]);
  useEffect(()=>{
-  axios.get<Todo[]>('http://localhost:3000/todos').then((response)=>{
+  axios.get<Todo[]>('http://localhost:3000/todos/').then((response)=>{
     setTodos(response.data);
   })
  })
 
  const addTask = (todo: Omit<Todo, "id">) => {
-  axios.post<Todo>('http://localhost:3000/todos', todo)
+  axios.post<Todo>('http://localhost:3000/todos/', todo)
     .then((response) => {
       setTodos([...todos, response.data]);
     });
@@ -57,7 +57,7 @@ const deleteTodo = (id: number) => {
 
 
   return (
-    <div >
+    <div className='' >
       <Todoinput addone={addTask}/>
       <Todolist todos={todos} togglecompleted={togglecompleted} deleteTodo={deleteTodo} />
     </div>
